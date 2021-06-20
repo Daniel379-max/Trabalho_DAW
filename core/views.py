@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-def quem_somos(request):
-    return render(request, 'quem_somos.html')
+def index(request):
+    return render(request, 'index.html')
 
 def para_empresa(request):
     return render(request, 'para_empresa.html')
