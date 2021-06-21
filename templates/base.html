@@ -5,10 +5,23 @@
         <title>Currículos.com</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/uikit.min.css"/>
-        <link rel="stylesheet" href="css/custom.css"/>
-        <script src="js/uikit.min.js"></script>
-        <script src="js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+    <style>
+    .ct-text-title{
+        font-weight: lighter !important;
+        font-size: 20pt;
+    }
+    .ct-body-secondary{
+        background: #222222 !important;
+    }
+    body {
+        display: flex;
+        flex-direction: column; /* creates rows out of the elements main and footer */
+    }
+    </style>
   </head>
 <body>
      {% include 'barra_navegacao.html' %}
