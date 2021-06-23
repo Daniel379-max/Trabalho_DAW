@@ -1,31 +1,41 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<html lang="en" dir="ltr">
+    <head>
         <title>Currículos.com</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- UIkit CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
         <!-- UIkit JS -->
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
-    <style>
-    .ct-text-title{
-        font-weight: lighter !important;
-        font-size: 20pt;
-    }
-    .ct-body-secondary{
-        background: #222222 !important;
-    }
-    body {
-        display: flex;
-        flex-direction: column; /* creates rows out of the elements main and footer */
-    }
-    </style>
-  </head>
-<body>
-     {% include 'barra_navegacao.html' %}
-     {% block conteudo %}
-     {% endblock conteudo %}
-</body>
+        <style>
+            .ct-text-title{
+            font-weight: lighter !important;
+            font-size: 20pt;
+            }
+            .ct-body-secondary{
+                background: #222222 !important;
+            }
+            body {
+              display: flex;
+              flex-direction: column; /* creates rows out of the elements main and footer */
+            }
+        </style>
+    </head>
+    <body class="uk-flex uk-flex-column">
+         {% include 'barra_navegacao.html' %}
+         <div class="ct-body-secondary uk-container-expand">
+            <div class="uk-margin-medium"></div>
+
+            <div class="uk-margin-small uk-container-small uk-margin-medium-bottom uk-background-default uk-align-center uk-height-1-1">
+                <!-- userside.html -->
+                {% block conteudo %}
+                {% endblock conteudo %}
+                <div class="uk-height-small">
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
