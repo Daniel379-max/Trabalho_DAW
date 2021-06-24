@@ -61,8 +61,8 @@ class Cadastro(Base):
     site = models.CharField("Site pessoal ", max_length=200, blank=True)
 
     '''TELEFONE'''
-    pessoal = models.CharField('Pessoal ', max_length=50, blank=True)
-    residencial = models.CharField('Residencial ', max_length=50, blank=True)
+    pessoal = models.CharField('Telefone Pessoal ', max_length=50, blank=True)
+    residencial = models.CharField('Telefone Residencial ', max_length=50, blank=True)
     outro_tel = models.CharField('Algum outro', max_length=50, blank=True)
 
     '''EXPERIENCIA'''
@@ -104,7 +104,8 @@ class Cadastro(Base):
     objpro = models.TextField('Objetivos Profissionais ', blank=True)
 
 
-    imagem = StdImageField('Imagem', upload_to='usuario', variations={'thumb': (300, 300)})
+    imagem_banner = StdImageField('Imagem Banner', upload_to='usuario', variations={'thumb': (1920, 1080)})
+    imagem_perfil = StdImageField('Imagem Perfil', upload_to='usuario', variations={'thumb': (500, 500)})
     slug = models.SlugField('Slug', max_length=250, unique=True, blank=True, editable=False)
     categoria = models.ForeignKey('usuario.Categoria', verbose_name='Categoria', on_delete=models.CASCADE)
 
