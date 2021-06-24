@@ -72,23 +72,23 @@ class Cadastro(Base):
 
     '''QUALIFICAÇOES'''
     var1 = models.CharField('Habilidade 1 ', max_length=50, blank=True)
-    porc1 = models.CharField('Porcentagem 1', max_length=4, blank=True)
+    porc1 = models.IntegerField('Porcentagem 1', blank=True, default=1)
     var2 = models.CharField('Habilidade 2 ', max_length=50, blank=True)
-    porc2 = models.CharField('Porcentagem 2', max_length=4, blank=True)
+    porc2 = models.IntegerField('Porcentagem 2',  blank=True, default=1)
     var3 = models.CharField('Habilidade 3 ', max_length=50, blank=True)
-    porc3 = models.CharField('Porcentagem 3', max_length=4, blank=True)
+    porc3 = models.IntegerField('Porcentagem 3',  blank=True, default=1)
     var4 = models.CharField('Habilidade 4 ', max_length=50, blank=True)
-    porc4 = models.CharField('Porcentagem 4', max_length=4, blank=True)
+    porc4 = models.IntegerField('Porcentagem 4',  blank=True, default=1)
 
     '''IDIOMA'''
     idi1 = models.CharField('Idioma 1 ', max_length=50, blank=True)
-    porc5 = models.CharField('Porcentagem 1', max_length=4, blank=True)
+    porc5 = models.IntegerField('Porcentagem 1',  blank=True, default=1)
     idi2 = models.CharField('Idioma 2 ', max_length=50, blank=True)
-    porc6 = models.CharField('Porcentagem 2', max_length=4, blank=True)
+    porc6 = models.IntegerField('Porcentagem 2',  blank=True, default=1)
     idi3 = models.CharField('Idioma 3 ', max_length=50, blank=True)
-    porc7 = models.CharField('Porcentagem 3', max_length=4, blank=True)
+    porc7 = models.IntegerField('Porcentagem 3',  blank=True, default=1)
     idi4 = models.CharField('Idioma 4 ', max_length=50, blank=True)
-    porc8 = models.CharField('Porcentagem 4', max_length=4, blank=True)
+    porc8 = models.IntegerField('Porcentagem 4',  blank=True, default=1)
 
     '''ESCOLARIDADE'''
     enfu = models.CharField('Ensino fundamental ', max_length=50, blank=True)
