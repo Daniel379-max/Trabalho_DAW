@@ -5,8 +5,19 @@
 .ct-body-secondary{
     background: #222222 !important;
 }
+.ct-blur{
+    filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.ct-white{
+    color: white;
+    text-shadow: 2px 2px #000000;
+}
+.ct-yellow{
+    color: yellow;
+    text-shadow: 2px 2px #000000;
+}
 body {
   display: flex;
   flex-direction: column; /* creates rows out of the elements main and footer */
-  background-size: cover;
 }

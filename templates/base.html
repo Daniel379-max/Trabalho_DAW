@@ -12,11 +12,23 @@
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
         <style>
             .ct-text-title{
-            font-weight: lighter !important;
-            font-size: 20pt;
+                font-weight: lighter !important;
+                font-size: 20pt;
             }
             .ct-body-secondary{
                 background: #222222 !important;
+            }
+            .ct-blur{
+                filter: blur(8px);
+              -webkit-filter: blur(8px);
+            }
+            .ct-white{
+                color: white;
+                text-shadow: 2px 2px #000000;
+            }
+            .ct-yellow{
+                color: yellow;
+                text-shadow: 2px 2px #000000;
             }
             body {
               display: flex;
@@ -24,17 +36,16 @@
             }
         </style>
     </head>
-    <body class="uk-flex uk-flex-column">
+    <body class="uk-flex uk-flex-column uk-height-viewport">
          {% include 'barra_navegacao.html' %}
          <div class="ct-body-secondary uk-container-expand">
             <div class="uk-margin-medium"></div>
 
-            <div class="uk-margin-small uk-container-small uk-margin-medium-bottom uk-background-default uk-align-center uk-height-1-1">
+            <div class="uk-padding-small uk-margin-small uk-container-small uk-margin-medium-bottom uk-background-default uk-align-center uk-height-1-1">
                 <!-- userside.html -->
                 {% block conteudo %}
                 {% endblock conteudo %}
-                <div class="uk-height-small">
-                </div>
+
             </div>
         </div>
     </body>
