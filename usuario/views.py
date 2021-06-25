@@ -8,7 +8,7 @@ def listar_usuarios(request, slug_categoria=None):
     lista_usuarios = Cadastro.objects.filter(ativo=True)
     if slug_categoria:
         categoria = get_object_or_404(Categoria, slug=slug_categoria)
-        lista_produtos = Cadastro.objects.filter(categoria=categoria)
+        lista_usuarios = Cadastro.objects.filter(categoria=categoria)
 
     contexto = {
         'categoria': categoria,
