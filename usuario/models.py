@@ -141,5 +141,5 @@ def usuario_pre_save(signal, instance, sender, **kwargs):
 def categoria_pre_save(signal, instance, sender, **kwargs):
     instance.slug = slugify(instance.nome)
 
-signals.pre_save.connect(usuario_pre_save, sender=Cadastro)
+signals.pre_save.connect(usuario_pre_save, sender= Cadastro)
 signals.pre_save.connect(categoria_pre_save, sender=Categoria)

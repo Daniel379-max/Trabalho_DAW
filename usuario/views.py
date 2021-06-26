@@ -1,19 +1,12 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import Cadastro, Categoria
 
 
-def listar_usuarios(request, slug_categoria=None):
-    categoria = None
-    lista_categorias = Categoria.objects.all()
-    lista_usuarios = Cadastro.objects.filter(ativo=True)
-    if slug_categoria:
-        categoria = get_object_or_404(Categoria, slug=slug_categoria)
-        lista_usuarios = Cadastro.objects.filter(categoria=categoria)
+def listar_usuarios(request):
 
-    contexto = {
-        'categoria': categoria,
-        'lista_categorias': lista_categorias,
-        'lista_usuarios': lista_usuarios,
-     }
-    return render(request, 'userside.html')
+    lista_categorias = Categoria.objects.all()
+    listar_usuarios = Cadastro.objects.all()
+
+
+    return render(request, 'index.html')
 
